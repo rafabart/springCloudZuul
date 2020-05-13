@@ -24,7 +24,7 @@ O Projeto consiste em subir quantro aplicações rest, sendo elas:
 
 
 <p>1)Eureka Endpoint</p>
-Exibe a saúde das aplicaçes:
+Exibe a saúde das aplicações:
 
 URL(GET): http://localhost:8761/
 
