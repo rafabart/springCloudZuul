@@ -14,11 +14,12 @@ Usando:
 
 
 O Projeto consiste em subir quantro aplicações rest, sendo elas:
-
+```
 1- springEurekaRegister -> Servidor de registro das aplicações;
 2- springApiProduct -> API para listar produtos;
 3- springApiCustomer -> API para listar usuários;
 4- springZuul -> Api para fazer o roteamento dinâmico entre as APIs acima;
+```
 (Subir as aplicações na ordem acima)
 
 
