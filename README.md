@@ -28,10 +28,14 @@ Exibe a saúde das aplicaçes:
 URL(GET): http://localhost:8761/
 
 
-<p>2)Zuul Products Endpoint</p>
+<p>2)Zuul Products Endpoint - Lista os produtos</p>
 
 URL(GET): http://localhost:8080/api/products
 
-<p>2)Zuul Customers Endpoint</p>
+<p>3)Zuul Customers Endpoint - Lista os usuários</p>
 
 URL(GET): http://localhost:8080/api/customers
+
+
+Os endpoints de listagem de produtos e usuários são da aplicação de roteamento(Zuul), que recebe as requisições e as
+redireciona para as aplicações customers e products. Sempre de forma dinâmica.
