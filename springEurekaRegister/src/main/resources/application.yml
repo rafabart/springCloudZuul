@@ -1,0 +1,9 @@
+server:
+  port: 8761
+
+eureka:
+  client:
+    # A instância do Eureka não precisa se auto registradar
+    register-with-eureka: false
+    # Não precisa buscar informações de registro no Eureka, pelo mesmo motivo anterior.
+    fetch-registry: false

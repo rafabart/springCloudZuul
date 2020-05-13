@@ -1,0 +1,36 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: zuul
+
+eureka:
+  instance:
+    hostname: localhost
+
+
+zuul:
+  # Configura para que o contexto de entrada seja no /api, assim todos os serviços vão ser acessados pela URI /api.
+  prefix: /api
+  # Quando configurado como ‘*’, todos os serviços são ignorados por padrão, assim nenhum serviço vai ser acessado pelo Zuul,
+  # apenas vão estar disponível os que estiverem mapeados explícitamente como os de 'customers' e 'products'.
+  ignored-services: '*'
+
+  # A configuração das rotas do Zuul no application.properties segue o seguinte padrão:
+  # zuul.routes. + nome do serviço + . propriedade a ser configurada para aquele serviço.
+  routes:
+    customers:
+      # Define a URI para acessar os dados de customer, no caso /api/customers.
+      path: /customers/**
+      # Informa o ID da aplicação registrada no Eureka, que é o valor atribuído em cada aplicação na propriedade
+      # spring.application.name do application.properties.
+      serviceId: customers
+      # Configurado com false, o prefixo do serviço configurado no path não tera nenhum efeito no path original
+      # da sua chamada, assim quando requisitado /api/customers será redirecionado para /customers.
+      strip-prefix: false
+
+    products:
+      path: /products/**
+      serviceId: products
+      strip-prefix: false

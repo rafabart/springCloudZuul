@@ -1,0 +1,12 @@
+server:
+  port: 8060
+
+# A identificação da aplicação que será registrada no Eureka.
+spring:
+  application:
+    name: customers
+
+# O hostname do servidor do Eureka.
+eureka:
+  instance:
+    hostname: localhost
